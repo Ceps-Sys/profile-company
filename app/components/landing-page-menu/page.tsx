@@ -45,12 +45,12 @@ export function MenuLandingPage() {
     <NavigationMenu className="z-50">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-blue-900 hover:text-white`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-blue-900`}>
             <Link href="/docs">Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent text-white hover:bg-blue-900 hover:text-white">Jurusan</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent text-white hover:bg-blue-900">Jurusan</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-96 p-4">
               <ListItem href="/docs" title="Introduction">
@@ -66,7 +66,7 @@ export function MenuLandingPage() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-blue-900 hover:text-white`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-blue-900`}>
             <Link href="/docs">Docs</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>

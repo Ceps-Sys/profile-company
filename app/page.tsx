@@ -1,21 +1,77 @@
 import Image from "next/image";
-import { MenuLandingPage } from "./components/landing-page-menu/page"; 
+import { MenuLandingPage } from "./components/landing-page-menu/page";
+import { Button } from "@/components/ui/button";
+import { LandingPageHero } from "./components/landing-page-hero/page";
+
+import { SearchIcon } from "lucide-react"
+import {
+  Field,
+  FieldDescription,
+  FieldLabel,
+} from "@/components/ui/field"
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+} from "@/components/ui/input-group"
 
 export default function Home() {
   return (
-  <main className="flex flex-1 w-full min-h-screen bg-white dark:bg-black">
-    {/* Tambahkan "relative z-50" di baris bawah ini */}
-    <div className="relative z-50 w-full h-[80px] bg-blue-800 dark:bg-blue-800 rounded-[70px] flex items-center justify-between px-10 mt-4 mx-8">
-      <div className="relative w-[230px] h-[50px]">
-        <Image 
-          src="/img/smk_mvp_ars_logo_white.png" 
-          alt="Logo" 
-          fill 
-          className="object-contain object-left" 
-        />
+    <main className="relative relative w-full bg-white dark:bg-black">
+      <div className="relative z-0 -mt-[96px]"> 
+        <LandingPageHero /> 
       </div>
-      <MenuLandingPage />
-    </div>
-  </main>
+      <div className="absolute top-0 left-0 z-10 w-full flex justify-center">
+        <div className="w-[95%] h-[80px] bg-blue-800 dark:bg-blue-800 rounded-[70px] flex mt-4 mx-8 p-4">
+          {/* logo */}
+          <div className="relative w-[200px] h-[50px] rounded-[70px] items-center justify-start">
+            <Image className="p-[7px]" src="/img/smk_mvp_ars_logo_white.png" alt="logo" fill />
+          </div>
+          {/* menu */}
+          <div className="flex flex-1 items-center justify-center">
+            <MenuLandingPage />
+          </div>
+          {/* login */}
+          <div className="flex items-center justify-end p-4">
+            <Button
+              className="
+            bg-white 
+            border border-gray-300 
+            text-orange-500 
+            hover:bg-gray-100 
+            dark:bg-gray-800 
+            dark:border-gray-700 
+            dark:text-orange-400
+            text-[16px]
+            font-semibold
+            rounded-full"
+              size="lg"
+            >
+              Login
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="flex relative z-[100] items-center justify-center p-4 shadow-sm bg-blue-100 w-[80px] h-[80px] h-auto rounded-[5px] mt-[500px]">
+            <Field className="max-w-sm">
+              <FieldLabel htmlFor="inline-start-input">Email</FieldLabel>
+              <InputGroup>
+                <InputGroupInput id="inline-start-input" placeholder="email" />
+                <InputGroupAddon align="inline-start">
+                  <SearchIcon className="text-muted-foreground" />
+                </InputGroupAddon>
+              </InputGroup>
+              <FieldLabel htmlFor="inline-start-input">Password</FieldLabel>
+              <InputGroup>
+                <InputGroupInput id="inline-start-input" placeholder="Password" />
+                <InputGroupAddon align="inline-start">
+                  <SearchIcon className="text-muted-foreground" />
+                </InputGroupAddon>
+              </InputGroup>
+              <button>Submit</button>
+            </Field>
+          </div>
+    </main>
+
   );
 }
