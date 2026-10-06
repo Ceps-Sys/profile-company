@@ -37,7 +37,7 @@ const listMenu = [
 export function AppSidebar() {
   return (
     <Sidebar className="border-r-0 [&>div]:bg-red-600 [&>div]:text-white">
-      <div className="flex h-full w-full flex-col bg-blue-600 text-white">
+      <div className="flex h-full w-full flex-col bg-red-400 text-white">
         {/* Header Logo */}
         <SidebarHeader className="p-4 bg-red-600">
           <div className="flex items-center justify-center gap-3 px-3 py-2">
@@ -64,7 +64,7 @@ export function AppSidebar() {
                 <SidebarMenuItem>
                   <SidebarMenuButton
                     asChild
-                    className="text-white hover:bg-blue-700 hover:text-white active:bg-blue-800"
+                    className="text-white hover:bg-red-700 hover:text-white active:bg-blue-800"
                   >
                     <Link href="/admin">
                       <LayoutDashboard className="w-4 h-4 mr-2" />
@@ -79,7 +79,7 @@ export function AppSidebar() {
                   <SidebarMenuItem key={menu.name}>
                     <SidebarMenuButton
                       asChild
-                      className="text-white hover:bg-blue-700 hover:text-white active:bg-blue-800"
+                      className="text-white hover:bg-red-700 hover:text-white active:bg-blue-800"
                     >
                       <Link href={menu.url}>
                         <menu.icon className="w-4 h-4 mr-2" />
@@ -93,7 +93,7 @@ export function AppSidebar() {
                 <SidebarMenuItem>
                   <SidebarMenuButton
                     asChild
-                    className="text-white hover:bg-blue-700 hover:text-white active:bg-blue-800"
+                    className="text-white hover:bg-red-700 hover:text-white active:bg-blue-800"
                   >
                     <Link href="/admin/categories">
                       <List className="w-4 h-4 mr-2" />
@@ -106,7 +106,7 @@ export function AppSidebar() {
                 <SidebarMenuItem>
                   <SidebarMenuButton
                     asChild
-                    className="text-white hover:bg-blue-700 hover:text-white active:bg-blue-800"
+                    className="text-white hover:bg-red-700 hover:text-white active:bg-blue-800"
                   >
                     <Link href="/admin/jurusan">
                       <GraduationCap className="w-4 h-4 mr-2" />
@@ -119,7 +119,7 @@ export function AppSidebar() {
                 <SidebarMenuItem>
                   <SidebarMenuButton
                     asChild
-                    className="text-white hover:bg-blue-700 hover:text-white active:bg-blue-800"
+                    className="text-white hover:bg-red-700 hover:text-white active:bg-blue-800"
                   >
                     <Link href="/admin/artikel">
                       <FileText className="w-4 h-4 mr-2" />
@@ -132,9 +132,9 @@ export function AppSidebar() {
                 <SidebarMenuItem>
                   <SidebarMenuButton
                     asChild
-                    className="text-white hover:bg-blue-700 hover:text-white active:bg-blue-800"
+                    className="text-white hover:bg-red-700 hover:text-white active:bg-blue-800"
                   >
-                    <Link href="/admin/artikel">
+                    <Link href="/admin/profile">
                       <Users className="w-4 h-4 mr-2" />
                       <span>Profile</span>
                     </Link>

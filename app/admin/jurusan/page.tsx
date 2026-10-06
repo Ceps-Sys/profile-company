@@ -16,7 +16,7 @@ export default function AdminTablePage() {
   return (
     <Card className="p-6">
       <h1 className="text-2xl font-bold mb-2">Admin Table Page</h1>
-      <p>Welcome to the admin table page!</p>
+      <p>Welcome to the jurusan table page!</p>
         <Table className="mt-4">
           <TableCaption>A list of your recent invoices.</TableCaption>
           <TableHeader>
